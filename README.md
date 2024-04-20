@@ -1,46 +1,49 @@
-# NEO-6M GPS (STM32 + IOT)
+#GPS Data Transmission from STM32 to ESP8266 via UART and Blynk
 
 ## Overview
 
-This project demonstrates the usage of an accelerometer (e.g., ADXL345) with a STM32 microcontroller. The accelerometer readings are obtained and processed to determine the device's acceleration in three dimensions (X, Y, Z).
+This project demonstrates how to interface a GPS module (NEO-6M) with an STM32 microcontroller to obtain GPS data, transmit it to an ESP8266 board via UART communication, and upload the data to the Blynk IoT platform for visualization and further processing.
 
 ## Table of Contents
 
-- [Features](#features)
-- [Hardware Requirements](#hardware-requirements)
-- [Software Requirements](#software-requirements)
-- [Setup](#setup)
+- [Components](#components)
+- [Dependencies](#dependencies)
+- [Hardware Setup](#hardwaresetup)
+- [Software Setup](#softwaresetup)
 - [Usage](#usage)
 - [Contributing](#contributing)
 
-## Features
+## Components
 
-- Read acceleration values from the accelerometer.
-- Process and interpret the accelerometer data.
-- Interface the accelerometer with a STM32 microcontroller.
+- STM32 microcontroller (e.g., STM32F103C8T6)
+- GPS module NEO-6M
+- ESP8266 board (e.g., NodeMCU)
+- Blynk IoT platform
 
-## Hardware Requirements
+## Dependencies
 
-- STM32 microcontroller (e.g., STM32F407G)
-- Accelerometer sensor (e.g., ADXL345)
-- Required connecting wires
+- STM32CubeMX (for STM32 configuration)
+- Arduino IDE (for ESP8266 programming)
+- Blynk library for Arduino
 
-## Software Requirements
+## Hardware Setup
 
-- STM32CubeIDE or other STM32 development environment
-- Appropriate drivers for the accelerometer
+1. Connect the GPS module NEO-6M to the STM32 microcontroller using UART communication.
+2. Connect the STM32 microcontroller to the ESP8266 board via UART communication.
+3. Power up the components as per their voltage requirements.
 
-## Setup
+## Software Setup
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/KuroGitsune28/STM32_ADXL-345.git
+1. Configure the STM32 microcontroller using STM32CubeMX to enable UART communication with the GPS module.
+2. Refer Neo_6M_F0_Test for the STM32 microcontroller to read GPS data and transmit it over UART. 
+3. Refer Neo_6M_F0_Test/ESP8266code for the ESP8266 board to receive GPS data from UART and upload it to Blynk using the Blynk library.
 
 ## Usage
-1. Open the project in your STM32 development environment.
-2. Connect the accelerometer to the STM32 microcontroller.
+1. Open the project in your STM32 CubeIDE or any development environment.
+2. Connect the GPS module to the STM32 microcontroller.
 3. Build and flash the project to your STM32 board.
+4. Connect STM32 to ESP8266 board and flsh the given code.
+5. Open blynk app and setup dashboard as per need and create V0 and V1 virtual pins to hold values.
 
 ## Contributing
 If you would like to contribute to this project, feel free to fork the repository and submit a pull request.
