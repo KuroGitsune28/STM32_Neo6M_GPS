@@ -1,4 +1,4 @@
-# Accelerometer Project
+# NEO-6M GPS (STM32 + IOT)
 
 ## Overview
 
