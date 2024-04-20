@@ -1,4 +1,4 @@
-#GPS Data Transmission from STM32 to ESP8266 via UART and Blynk
+# GPS Data Transmission from STM32 to ESP8266 via UART and Blynk
 
 ## Overview
 
