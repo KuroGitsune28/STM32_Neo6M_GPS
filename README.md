@@ -8,8 +8,8 @@ This project demonstrates how to interface a GPS module (NEO-6M) with an STM32 m
 
 - [Components](#components)
 - [Dependencies](#dependencies)
-- [Hardware Setup](#hardwaresetup)
-- [Software Setup](#softwaresetup)
+- [Hardware Setup](#hardware-setup)
+- [Software Setup](#software-setup)
 - [Usage](#usage)
 - [Contributing](#contributing)
 
